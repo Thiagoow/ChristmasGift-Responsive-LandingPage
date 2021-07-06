@@ -231,7 +231,7 @@ img {
   left: 45%;
   width: 5px;
   height: 5px;
-  background-color: var(--title-color);
+  background-color: var(--first-color);
   border-radius: 50%;
 }
 
