@@ -6,7 +6,7 @@ const showMenu = (toggleId, navId) => {
   // Validate that variables exist
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
-      // We add the show-menu class to the div tag with the nav__menu class
+      // We add the show-menu class to the div tag with the nav_menu class
       nav.classList.toggle("show-menu");
     });
   }
@@ -14,11 +14,11 @@ const showMenu = (toggleId, navId) => {
 showMenu("nav-toggle", "nav-menu");
 
 /*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll(".nav__link");
+const navLink = document.querySelectorAll(".nav_link");
 
 function linkAction() {
   const navMenu = document.getElementById("nav-menu");
-  // When we click on each nav__link, we remove the show-menu class
+  // When we click on each nav_link, we remove the show-menu class
   navMenu.classList.remove("show-menu");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
@@ -36,11 +36,11 @@ function scrollActive() {
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
         .classList.add("active-link");
     } else {
       document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
         .classList.remove("active-link");
     }
   });
@@ -68,7 +68,7 @@ window.addEventListener("scroll", scrollTop);
 /*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
-const iconTheme = "bx-sun";
+const iconTheme = "bx-toggle-right";
 
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
@@ -78,7 +78,9 @@ const selectedIcon = localStorage.getItem("selected-icon");
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "bx-moon" : "bx-sun";
+  themeButton.classList.contains(iconTheme)
+    ? "bx-toggle-left"
+    : "bx-toggle-right";
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
@@ -86,7 +88,7 @@ if (selectedTheme) {
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
-  themeButton.classList[selectedIcon === "bx-moon" ? "add" : "remove"](
+  themeButton.classList[selectedIcon === "bx-toggle-left" ? "add" : "remove"](
     iconTheme
   );
 }
@@ -103,20 +105,26 @@ themeButton.addEventListener("click", () => {
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
-  origin: "top",
   distance: "30px",
-  duration: 2000,
+  duration: 1800,
   reset: true
 });
 
 sr.reveal(
-  `.home__data, .home__img,
-            .about__data, .about__img,
-            .services__content, .menu__content,
-            .app__data, .app__img,
-            .contact__data, .contact__button,
-            .footer__content`,
+  `.home_data, .home_img, 
+           .decoration_data,
+           .accessory_content,
+           .footer_content`,
   {
+    origin: "top",
     interval: 200
   }
 );
+
+sr.reveal(`.share_img, .send_content`, {
+  origin: "left"
+});
+
+sr.reveal(`.share_data, .send_img`, {
+  origin: "right"
+});
