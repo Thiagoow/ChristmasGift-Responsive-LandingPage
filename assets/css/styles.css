@@ -248,7 +248,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--first-color);
+  background: rgba(218, 37, 53, 0.5);
   border-radius: 0.4rem;
   z-index: var(--z-tooltip);
   transition: 0.4s;
@@ -256,7 +256,7 @@ img {
 }
 
 .scrollTop:hover {
-  background-color: var(--first-color-send);
+  background-color: var(--first-color);
 }
 
 .scrollTop_icon {
@@ -493,4 +493,135 @@ img {
 }
 /*========== MEDIA QUERIES ==========*/
 
-/* For full-screen images on small screens */ ;
+/* For full-screen images on small screens */
+@media screen and (max-width: 359px) {
+  .home_img,
+  .share_img,
+  .send_img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .home_container,
+  .share_container,
+  .send_container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .home_container {
+    padding: 5rem 0 0;
+  }
+
+  /* Deixa a imagem do lado direito: */
+  .home_img {
+    order: 1;
+  }
+
+  .section-title-center,
+  .share_data,
+  .send_description {
+    text-align: initial;
+  }
+
+  .home_img,
+  .share_img,
+  .send_img {
+    width: 100%;
+  }
+
+  /* Deixa a imagem do lado esquerdo: */
+  .share_img {
+    order: -1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding-top: 7rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav_list {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav_item {
+    margin-left: var(--mb-5);
+    margin-bottom: 0;
+  }
+
+  /* Remove o botão do menu hambúrguer: */
+  .nav_toggle {
+    display: none;
+  }
+
+  .home_container {
+    padding: 7rem 2rem 0;
+  }
+
+  .share_container {
+    padding: 0 2rem;
+  }
+
+  .accessories_container {
+    grid-template-columns: repeat(3, 224px);
+    justify-content: center;
+  }
+
+  .accessory_content {
+    padding: 0.5rem 1.5rem 1.5rem;
+  }
+
+  .accessory_img {
+    width: 120px;
+    margin-bottom: var(--mb-1);
+  }
+
+  .accessory_title,
+  .accessory_category {
+    text-align: initial;
+  }
+
+  .accessory_button {
+    padding: 0.75rem;
+  }
+
+  .send {
+    background: none;
+  }
+
+  .send_container {
+    background-color: var(--first-color-send);
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home_img,
+  .share_img,
+  .send_img {
+    width: 469px;
+  }
+
+  .home_container,
+  .share_container,
+  .send_container {
+    column-gap: 5rem;
+  }
+}
