@@ -58,7 +58,7 @@ window.addEventListener("scroll", scrollHeader);
 
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
-  const scrollTop = document.getElementById("scroll-top");
+  const scrollTop = document.getElementById("scrollTop");
   // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
   if (this.scrollY >= 560) scrollTop.classList.add("show-scroll");
   else scrollTop.classList.remove("show-scroll");
@@ -112,13 +112,13 @@ const sr = ScrollReveal({
 
 sr.reveal(
   `.home_data, .home_img, 
-           .decoration_data,
+           .decoration_cards,
            .accessory_content,
            .footer_content`,
   {
     //Vem do:
     origin: "top",
-    interval: 200
+    interval: 100
   }
 );
 

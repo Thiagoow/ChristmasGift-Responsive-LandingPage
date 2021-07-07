@@ -58,6 +58,8 @@
   box-sizing: border-box;
 }
 
+/* Faz com que a rolagem da landing page até o id
+seja suave: */
 html {
   scroll-behavior: smooth;
 }
