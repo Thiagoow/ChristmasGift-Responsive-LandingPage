@@ -116,15 +116,18 @@ sr.reveal(
            .accessory_content,
            .footer_content`,
   {
+    //Vem do:
     origin: "top",
     interval: 200
   }
 );
 
 sr.reveal(`.share_img, .send_content`, {
+  //Vem da:
   origin: "left"
 });
 
 sr.reveal(`.share_data, .send_img`, {
+  //Vem da:
   origin: "right"
 });

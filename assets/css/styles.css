@@ -13,6 +13,7 @@
   --text-color: #5b5757;
   --text-color-light: #8f8a8a;
   --body-color: #fefbfb;
+  --nav-menu-color: #f7f7f7;
   --container-color: #fff;
 
   /*========== Font and typography ==========*/
@@ -63,11 +64,12 @@ html {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --first-color-send: #161212;
   --title-color: #f3f1f1;
   --text-color: #d1c7c8;
-  --body-color: #251d1e;
-  --container-color: #302728;
+  --body-color: #151520;
+  --nav-menu-color: #1b1b2c;
+  --container-color: #313131;
+  --first-color-send: #3a3939;
 }
 
 /*========== Button Dark/Light ==========*/
@@ -181,7 +183,7 @@ img {
     margin: 0 auto;
     padding: 2.5rem 0 0;
     text-align: center;
-    background-color: var(--body-color);
+    background-color: var(--nav-menu-color);
     transition: 0.4s;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
@@ -261,7 +263,7 @@ img {
 
 .scrollTop_icon {
   font-size: 2.5rem;
-  color: var(--body-color);
+  color: #fff;
 }
 
 .show-scroll {
@@ -558,6 +560,12 @@ img {
   .nav_item {
     margin-left: var(--mb-5);
     margin-bottom: 0;
+  }
+
+  /* Conserta a posição do dark Mode Toggle: */
+  .change-theme {
+    position: initial;
+    margin-left: var(--mb-4);
   }
 
   /* Remove o botão do menu hambúrguer: */
