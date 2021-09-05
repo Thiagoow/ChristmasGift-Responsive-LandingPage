@@ -15,6 +15,9 @@
   --body-color: #fefbfb;
   --nav-menu-color: #f7f7f7;
   --container-color: #fff;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --box-shadow-card-container-color: rgba(65, 11, 16, 0.15);
+  --box-shadow-card-container-hover: rgba(65, 11, 16, 0.3);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -72,6 +75,9 @@ body.dark-theme {
   --nav-menu-color: #1b1b2c;
   --container-color: #313131;
   --first-color-send: #3a3939;
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
+  --box-shadow-card-container-color: rgba(255, 255, 255, 0.15);
+  --box-shadow-card-container-hover: rgba(255, 0, 0, 0.3);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -187,7 +193,7 @@ img {
     text-align: center;
     background-color: var(--nav-menu-color);
     transition: 0.4s;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 4px var(--box-shadow-color);
     border-radius: 2rem;
     z-index: var(--z-fixed);
   }
@@ -241,7 +247,7 @@ img {
 
 /* Change background header */
 .scroll-header {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px var(--box-shadow-color);
 }
 
 /* Scroll Top */
@@ -347,12 +353,12 @@ img {
   text-align: center;
   padding: 1rem 1rem 2rem;
   background-color: var(--container-color);
-  box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
+  box-shadow: 0 2px 6px var(--box-shadow-card-container-color);
   border-radius: 1rem;
 }
 
 .decoration_cards:hover {
-  box-shadow: 0 3px 12px rgba(65, 11, 16, 0.3);
+  box-shadow: 0 3px 12px var(--box-shadow-card-container-hover);
 }
 
 .decoration_title {
@@ -370,12 +376,12 @@ img {
   display: grid;
   padding: 0.25rem 0.75rem 0.75rem;
   background-color: var(--container-color);
-  box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
+  box-shadow: 0 2px 6px var(--box-shadow-card-container-color);
   border-radius: 1rem;
 }
 
 .accessory_content:hover {
-  box-shadow: 0 3px 12px rgba(65, 11, 16, 0.3);
+  box-shadow: 0 3px 12px var(--box-shadow-card-container-hover);
 }
 
 .accessory_img {
